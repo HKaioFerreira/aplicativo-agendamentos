@@ -45,7 +45,12 @@ class Cadastro extends Banco{
     public function incluir(){
         return $this->setAgendamentos($this->getNome(),$this->getTelefone(),$this->getOpcao(),$this->getData(),$this->getObs());
     }
+    public function listar($id){
+		return $this->getAgendamentos($id);
+	}
+	
+	public function editar(){
+        return $this->updateAgendamentos($this->getId(),$this->getNome(),$this->getTelefone(),$this->getOrigem(),$this->getData_contato(),$this->getObservacao());
+    }
 }
-
-
 ?>

@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="consultar.html">Consultar</a>
+                        <a class="nav-link" href="agendamento-consulta.php">Consultar</a>
                     </li>
                     <li>
                         <a class="nav-link" href="editar.html">Editar</a>
@@ -27,15 +27,15 @@
                 <form method="post" action="ControllerCadastro.php" id="form" name="form">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nome:</label>
-                        <input type="text" class="form-control" name="txtnome" required id="txtNome">
+                        <input type="text" class="form-control" name="txtnome"  id="txtnome">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Telefone:</label>
-                        <input type="tel" class="form-control" required name="telefone" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
+                        <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="(xx)xxxxx-xxxx">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Origem:</label>
-                        <select class="form-control" required name="opcao" id="txtOrigem">
+                        <select class="form-control" name="opcao" id="opcao">
                             <option>Celular</option>
                             <option>Fixo</option>
                             <option>Whatsapp</option>
@@ -46,11 +46,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Data do Contato:</label>
-                        <input type="date" class="form-control" required name="data" id="txtDataContato">
+                        <input type="date" class="form-control" name="data" id="data">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Observação</label>
-                        <textarea class="form-control" name="obs" id="txtObservacao" rows="3"></textarea>
+                        <textarea class="form-control" name="obs" id="obs" rows="3"></textarea>
                     </div>
                     <button type="submit" id="btnInserir" class="btn btn-primary">Cadastrar</button>
                 </form>
