@@ -41,11 +41,11 @@ public function getAgendamentos($id){
         $i = 0;
         foreach($lista as $l){
             $f_lista[$i]['id'] = $l['id'];
-            $f_lista[$i]['txtnome'] = $l['txtnome'];
+            $f_lista[$i]['txtnome'] = $l['nome'];
             $f_lista[$i]['telefone'] = $l['telefone'];
-            $f_lista[$i]['opcao'] = $l['opcao'];
-            $f_lista[$i]['data'] = $l['data'];
-            $f_lista[$i]['obs'] = $l['obs'];
+            $f_lista[$i]['opcao'] = $l['origem'];
+            $f_lista[$i]['data'] = $l['data_consulta'];
+            $f_lista[$i]['obs'] = $l['observacao'];
             $i++;
         }
         return $f_lista;
@@ -55,7 +55,7 @@ public function getAgendamentos($id){
 }
 
 public function updateAgendamentos($id,$nome,$telefone,$opcao,$data,$obs){
-   $stmt = $this->mysqli->query("UPDATE agendamento SET `nome` = '" . $nome . "', `telefone` =  '" . $telefone . "', `origem` =  '" . $opcao . "', `data_contato` =  '" . $data . "', `observacao` =   '" . $obs . "' WHERE `id` =  '" . $id . "';");
+   $stmt = $this->mysqli->query("UPDATE agendamento SET `nome` = '" . $nome . "', `telefone` =  '" . $telefone . "', `origem` =  '" . $opcao . "', `data_consulta` =  '" . $data . "', `observacao` =   '" . $obs . "' WHERE `id` =  '" . $id . "';");
     if( $stmt > 0){
         return true ;
     }else{

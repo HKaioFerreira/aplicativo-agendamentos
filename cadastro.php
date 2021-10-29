@@ -3,12 +3,16 @@ require_once("Banco.php");
 
 class Cadastro extends Banco{
 
+    Private $id;
     Private $nome;
     Private $telefone;
     Private $opcao;
     Private $data;
     Private $obs;
 
+    public function setId($string){
+        $this->id = $string;
+    }
     public function setNome($string){
         $this->nome = $string;
     }
@@ -26,6 +30,9 @@ class Cadastro extends Banco{
     }
 
 
+    public function getId(){
+        return $this->id;
+    }
     public function getNome(){
         return $this->nome;
     }
@@ -50,7 +57,7 @@ class Cadastro extends Banco{
 	}
 	
 	public function editar(){
-        return $this->updateAgendamentos($this->getId(),$this->getNome(),$this->getTelefone(),$this->getOrigem(),$this->getData_contato(),$this->getObservacao());
+        return $this->updateAgendamentos($this->getId(),$this->getNome(),$this->getTelefone(),$this->getOpcao(),$this->getData(),$this->getObs());
     }
 }
 ?>

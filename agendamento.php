@@ -24,7 +24,7 @@
         <p>Sistema utilizado para agendamento de serviços</p>
             <div class="form-group">
               <p>
-                <form method="post" action="ControllerCadastro.php" id="form" name="form">
+                <form method="post" action="ControllerCadastro.php?funcao=cadastro" id="form" name="form">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nome:</label>
                         <input type="text" class="form-control" name="txtnome"  id="txtnome">

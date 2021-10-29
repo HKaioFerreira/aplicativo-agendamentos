@@ -13,10 +13,10 @@ require_once("ControllerCadastro.php");
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Cadastrar</a>
+                        <a class="nav-link" href="agendamento.php">Cadastrar</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="editar.html">Editar</a>
+                        <a class="nav-link" href="editar.php">Editar</a>
                     </li class="nav-item">
                 </ul>
             </div>
@@ -45,13 +45,13 @@ require_once("ControllerCadastro.php");
 						?>
 
 							<tr>
-								<td scope="col"><?php echo $resultado[$i]['nome']; ?></td>
+								<td scope="col"><?php echo $resultado[$i]['txtnome']; ?></td>
 								<td scope="col"><?php echo $resultado[$i]['telefone'];?></td>
-								<td scope="col"><?php echo $resultado[$i]['origem'];?></td>
-								<td scope="col"><?php echo $resultado[$i]['data_consulta']; ?></td>
-								<td scope="col"><?php echo $resultado[$i]['observacao']; ?></td>
+								<td scope="col"><?php echo $resultado[$i]['opcao'];?></td>
+								<td scope="col"><?php echo $resultado[$i]['data']; ?></td>
+								<td scope="col"><?php echo $resultado[$i]['obs']; ?></td>
 								<td scope="col">
-									<button type="button" class="btn btn-outline-primary" onclick="location.href='editarClientes.php?id=<?php echo $resultado[$i]['id']; ?>'" style="width: 72px;">Editar</button>
+									<button type="button" class="btn btn-outline-primary" onclick="location.href='editar.php?id=<?php echo $resultado[$i]['id']; ?>'" style="width: 72px;">Editar</button>
 									<button type="button" class="btn btn-outline-primary" style="width: 72px">Excluir</button>
 								</td>
 							</tr>
